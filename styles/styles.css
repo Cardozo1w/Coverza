@@ -1,6 +1,6 @@
 /*Header*/
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -14,6 +14,11 @@ html{
 
 .bg-navbar {
   background-color: rgba(4, 52, 116, 0.418);
+  transition: .4s all linear;
+}
+
+.bg-navar-oscuro{
+  background-color: rgba(4, 53, 116, 0.918) !important;
 }
 
 .navegacion {
@@ -116,9 +121,9 @@ html{
 }
 
 /** Anuncios **/
-.container-cards{
-    display: flex;
-    justify-content: space-between;
+.container-cards {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container-cards .card {
@@ -129,12 +134,12 @@ html{
   overflow: hidden;
   text-align: center;
   transition: all 0.25s;
-  display: inline-block
+  display: inline-block;
 }
 
-.card .info-card{
-    width: 300px;
-    margin: 0 auto;
+.card .info-card {
+  width: 300px;
+  margin: 0 auto;
 }
 
 .container-cards .card:hover {
@@ -147,8 +152,8 @@ html{
   height: 300px;
 }
 
-.info-card{
-    width: 350px;
+.info-card {
+  width: 350px;
 }
 .container-cards .card .info-card h4 {
   font-weight: 400;
@@ -161,64 +166,115 @@ html{
 }
 
 .precio {
-  color: #3498db;
+  color: rgb(4, 70, 156);
   font-size: 1.2rem !important;
   font-weight: 700 !important;
-
 }
 
 .container-cards .card .info-card a {
   font-weight: 500;
   text-decoration: none;
-  color: #3498db;
+  color: rgb(4, 70, 156);
 }
 
-
-.room{
-    width: 150px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 0 !important;
+.room {
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0 !important;
 }
 
-.room li{
-    font-size: 1.3rem;
+.room li {
+  font-size: 1.3rem;
+  list-style: none;
 }
-.room li{
-list-style: none;
-
+.room li i {
+  margin-right: 10px;
 }
 
 /*Finaliza propiedades*/
 
 /*Seccion nosotros*/
-.texto-nosotros{
-    width: 1100px;
-    margin: 0 auto;
-    line-height: 2;
+.texto-nosotros {
+  width: 1100px;
+  margin: 0 auto;
+  line-height: 2;
 }
 
-.iconos-nosotros{
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-between;
+.iconos-nosotros {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
 }
-.about{
-    width: 400px;
-    text-align: center;
-    color: #4f4f4f;
+.about {
+  width: 400px;
+  text-align: center;
+  color: #4f4f4f;
 }
 
 .about i {
-    font-size: 5.5rem;
-    color: #3498db;
-    margin-bottom: 20px;
+  font-size: 5.5rem;
+  color: rgb(4, 70, 156);
+  margin-bottom: 20px;
 }
 
-.about h3{
-    font-weight: 400;
-    margin-bottom: 20px;
-    line-height: 2;
-
+.about h3 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 2;
 }
+
+/*Estilos formulario de contacto*/
+.seccion-contacto {
+  background-image: url("/img//fondo1.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  column-gap: 2rem;
+  background-color: white;
+  width: 1100px;
+  padding: 80px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-contacto {
+  background-color: rgb(4, 52, 116);
+  color: white;
+  padding: 10px 15px;
+}
+
+.btn-contacto:hover {
+  background-color: rgb(4, 70, 156);
+  color: white;
+  transition: 0.2s all linear;
+}
+
+/*Seccion footer*/
+.section-footer {
+  background-color: rgb(13, 16, 19);
+  text-align: center;
+}
+
+.section-footer p,
+.section-footer h4{
+  color: white;
+  font-weight: 300;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.section-footer nav{
+  padding-top: 30px;
+}
+

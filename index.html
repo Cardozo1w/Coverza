@@ -24,7 +24,7 @@
   <body>
 
 <header class="header" id="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar scrolling-navbar fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navbar scrolling-navbar fixed-top" id="navbar-main">
         <div class="container-fluid container navegacion">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
                 <a class="nav-link" href="#">Blog</a>
               </li>  
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>  
               
             </ul>
@@ -87,7 +87,7 @@
 </header>
 
 
-<section class="propiedades container" id="propiedades">
+<main class="propiedades container" id="propiedades">
     
     <h1 class="text-center mt-5 titulos">Propiedades</h1>
     <h3 class="text-center mt-3 mb-5 titulos">Conoce algunas de nuestras propiedades en disponibilidad</h3>
@@ -140,7 +140,7 @@
 </div>
 
     </div>
-</section>
+</main>
 
 
 <section class="container nosotros" id="nosotros">
@@ -172,8 +172,101 @@
 </section>
 
 
+    <h1 class="titulos mt-5 mb-5 text-center">Contacto</h1>
 
 
+
+
+<section class="seccion-contacto" id="contacto">
+
+  <div class="contacto container">
+    <form action="" method="post"  class="formulario-contacto">
+        <h4>Escribenos!!!</h4>
+        <div class="row ">
+            <div class="col-md-12 mb-3 ">
+                <div class="form-group ">
+                    <input type="text " name="name" class="form-control" id="name" placeholder="Nombre"/>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3 ">
+                <div class="form-group ">
+                    <input type="email " class="form-control" name="email" id="email " placeholder="Email"/>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3 ">
+                <div class="form-group ">
+                    <input type="text " class="form-control" name="subject " id="subject " placeholder="Asunto"/>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3 ">
+                <div class="form-group ">
+                    <textarea class="form-control" name="message " rows="5 " required placeholder="Mensaje "></textarea>
+                </div>
+            </div>
+            <div class="col-md-12 ">
+                <button type="submit " class="btn btn-contacto">Enviar Mensaje</button>
+            </div>
+        </div>
+    </form>
+
+
+<div>
+
+  <h4>Informacion de Coverza</h4>
+
+  <p>Direccion</p>
+  <p>Francisco I. Madero #62, Centro, 95640 Isla, Ver.</p>
+  <p>Whatsapp</p>
+  <p>+52 283 874 84 50</p>
+  <p>Correo electronico</p>
+  <p>coverza@coverza.com.mx</p>
+  <p>Horario Laboral</p>
+  <p>Lunes a Sábado de 9:00 am a 7:00 pm</p>
+</div>
+    
+</div>
+</section>
+
+
+<footer class="section-footer">
+
+  <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container-fluid container navegacion">
+      <div class="collapse navbar-collapse navegacion" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#propiedades">Propiedades</a>
+          </li>   
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>  
+          
+        </ul>
+      </div>
+
+      <div class="social-networks">
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-twitter-square"></i>
+
+      </div>
+    </div>
+  </nav>
+
+  <h4>Coverza Inmobiliaria &copy</h4>
+  <p>Tu patrimonio es nuestra prioridad</p>
+
+</footer>
+
+<script src="/js/index.js"></script>
 
   </body>
 </html>
