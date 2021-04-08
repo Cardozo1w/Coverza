@@ -45,7 +45,7 @@ a:hover {
   margin: 15px 0 15px 0;
 }
 
-.color i{
+.color i {
   color: rgb(4, 52, 116);
 }
 
@@ -477,6 +477,12 @@ a:hover {
   width: 100%;
 }
 
+.iconos-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .texto-nosotros {
   width: 100%;
   margin: 0 auto;
@@ -484,12 +490,23 @@ a:hover {
   margin-bottom: 30px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 768px) {
   .iconos-nosotros {
     margin-top: 80px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
+
+  .about{
+    margin-right: 20px;
+  }
+
+  .about:last-of-type{
+    margin-right: 0px;
+  }
+
+
 }
 
 .about {
@@ -502,6 +519,7 @@ a:hover {
   .about {
     width: 400px;
   }
+
 }
 
 .about i {
