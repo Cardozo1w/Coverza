@@ -17,6 +17,40 @@ h4 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 1200px !important;
+  }
+}
+
+/*========================================
+              UTILIDADES
+=========================================*/
+.titulos,
+.textos {
+  color: black;
+  font-weight: 300;
+}
+
+.titulos {
+  margin: 15px 0 15px 0;
+}
+
+@media (min-width: 768px) {
+  .titulos {
+    margin: 25px 0 25px 0;
+  }
+}
+
 .header {
   height: 100vh !important;
   background-image: url(../img/header2.jpg);
@@ -33,7 +67,7 @@ h4 {
 
 .bg-navar-oscuro {
   /*background-color: rgba(4, 53, 116, 0.918) !important;*/
-  background-color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 .black {
@@ -55,12 +89,90 @@ h4 {
   margin-right: 0 !important;
 }
 
+.nav-link {
+  font-weight: 500;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+/*=====================================
+          DROPDOWN
+=====================================*/
+.navbar .dropdown ul {
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: calc(100% + 30px);
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.navbar .dropdown ul li {
+  min-width: 200px;
+}
+
+.navbar .dropdown ul a {
+  padding: 10px 20px;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 600;
+  color: #2f4d5a;
+}
+
+.navbar .dropdown ul a i {
+  font-size: 12px;
+}
+
+.navbar .dropdown:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.navbar .dropdown .dropdown ul {
+  top: 0;
+  left: calc(100% - 30px);
+  visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
+@media (max-width: 1366px) {
+  .navbar .dropdown .dropdown ul {
+    left: -90%;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    left: -100%;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar-dark .navbar-toggler-icon,
   .navbar-light .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
   }
 }
+
+/*==================================
+            FORM DE BUSQUEDA
+==================================*/
 
 .form-busqueda {
   display: flex;
@@ -74,31 +186,62 @@ h4 {
 .contenedor-input {
   background-color: rgba(5, 12, 22, 0.788);
   width: 75%;
-  height: 30%;
+  height: 136px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
 }
 
+@media (min-width: 400px) {
+  .contenedor-input {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor-input {
+    height: 220px;
+  }
+}
+
 .contenedor-input h1 {
-  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-input h1 {
+    font-size: 2rem;
+  }
 }
 
 .form-busqueda .contenedor-input .buscador {
   display: flex;
   width: 93%;
-  height: 50px;
+  height: 30px;
   background-color: white;
   border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .form-busqueda .contenedor-input .buscador {
+    height: 50px;
+  }
 }
 
 .form-busqueda .contenedor-input .buscador select {
   flex: 0 0 30%;
   border: none;
-  padding-left: 30px;
+  padding-left: 5px;
   border-radius: 30px 0 0 30px;
+  font-size: 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .form-busqueda .contenedor-input .buscador select {
+    padding-left: 30px;
+  }
 }
 
 .form-busqueda .contenedor-input .buscador select:focus {
@@ -107,9 +250,10 @@ h4 {
   outline: none;
 }
 .form-busqueda .contenedor-input .buscador input {
-  flex: 0 0 64%;
+  flex-basis: 63%;
   border: none;
   text-align: center;
+  font-size: 0.6rem;
 }
 .form-busqueda .contenedor-input .buscador input:focus {
   border-radius: 0;
@@ -126,11 +270,27 @@ h4 {
   color: white;
   border: none;
   border-radius: 0 7px 7px 0;
+  font-size: 0.6rem;
+}
+
+@media (min-width: 768px) {
+  .form-busqueda .contenedor-input .buscador select,
+  .form-busqueda .contenedor-input .buscador input,
+  .form-busqueda .contenedor-input .buscador button {
+    font-size: 1rem;
+  }
 }
 
 .social-networks {
-  color: white;
-  width: 100px;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .social-networks {
+    display: block;
+    color: white;
+    width: 100px;
+  }
 }
 
 .social-networks i {
@@ -143,34 +303,124 @@ h4 {
 
 /*Finaliza Header*/
 
-/*Inicia Propiedades*/
+/*================================
+        PROPIEDADES
+================================*/
+/*==============================
+         ANUNCIOS
+================================ */
 
-.titulos {
-  color: black;
-  font-weight: 300;
+.propiedades h3 {
+  font-size: 1rem;
 }
 
-/** Anuncios **/
-
-@media (min-width: 620px) {
-  .container-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: 768px) {
+  .propiedades h3 {
+    font-size: 1.2rem;
   }
 }
 
+.container-cards {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
 .container-cards .card {
-  width: 30%;
-  height: 35rem;
-  /*background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);*/
+  width: 365px;
+  height: 480px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  margin-bottom: 40px;
   text-align: center;
   transition: all 0.25s;
-  display: inline-block;
-  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .container-cards .card {
+    margin-right: 40px;
+  }
+}
+
+.container-cards .card:last-of-type {
+  margin-right: 0;
+}
+
+.card .info-card {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-cards .card .info-card h4 {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-cards .card .info-card p {
+  padding: 0 1rem;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.container-cards .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-cards .card img {
+  width: 100%;
+  height: 44%;
+}
+
+.fa-map-marker-alt {
+  margin-right: 10px;
+}
+
+.precio {
+  color: rgb(4, 70, 156);
+  font-size: 1.2rem;
+  font-weight: 700 !important;
+}
+
+.container-cards .card .info-card a {
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(4, 70, 156);
+  font-size: 1rem;
+}
+
+.room {
+  width: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0 !important;
+}
+
+.room li {
+  font-size: 1rem;
+  list-style: none;
+}
+
+.room li i {
+  margin-right: 10px;
+}
+
+.contenedor-boton {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contenedor-boton {
+    width: 100%;
+    text-align: right;
+  }
 }
 
 .container-cards .card-horizontal {
@@ -187,38 +437,9 @@ h4 {
   color: black;
 }
 
-.card .info-card {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.container-cards .card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
 .container-cards .card-horizontal:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.container-cards .card img {
-  width: 100%;
-  height: 25%;
-}
-
-@media (min-width: 768) {
-  .container-cards .card img {
-    width: 100%;
-    height: 35%;
-  }
-}
-
-@media (min-width: 920px) {
-  .container-cards .card img {
-    width: 100%;
-    height: 40%;
-  }
 }
 
 .container-cards .card-horizontal img {
@@ -245,71 +466,38 @@ h4 {
   margin: 20px 0 0 20px;
 }
 
-.fa-map-marker-alt {
-  margin-right: 10px;
-}
-.container-cards .card .info-card h4 {
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-
-.container-cards .card .info-card p {
-  padding: 0 1rem;
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.precio {
-  color: rgb(4, 70, 156);
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-}
-
-.container-cards .card .info-card a {
-  font-weight: 500;
-  text-decoration: none;
-  color: rgb(4, 70, 156);
-}
-
-.room {
-  width: 150px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 0 !important;
-}
-
-.room li {
-  font-size: 1.3rem;
-  list-style: none;
-}
-.room li i {
-  margin-right: 10px;
-}
-
-.contenedor-boton {
-  text-align: right;
-}
-
 /*Finaliza propiedades*/
 
 /*Seccion nosotros*/
+.nosotros {
+  width: 100%;
+}
+
 .texto-nosotros {
   width: 100%;
   margin: 0 auto;
   line-height: 2;
+  margin-bottom: 30px;
 }
 
-.iconos-nosotros {
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 400px) {
+  .iconos-nosotros {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
+
 .about {
-  width: 400px;
   text-align: center;
   color: #4f4f4f;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 400px) {
+  .about {
+    width: 400px;
+  }
 }
 
 .about i {
@@ -320,37 +508,87 @@ h4 {
 
 .about h3 {
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   line-height: 2;
 }
 
-/*Estilos formulario de contacto*/
+@media (min-width: 768px) {
+  .about h3 {
+    margin-bottom: 20px;
+  }
+}
+
+/*===============================================
+            FORMULARIO DE CONTACTO
+================================================*/
+
 .seccion-contacto {
   background-image: url("/img//fondo1.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  height: 80vh;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .contacto {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  column-gap: 2rem;
   background-color: white;
-  width: 1100px;
-  padding: 80px;
+  width: 95%;
+  padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contacto h4 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .contacto {
+    padding: 80px;
+  }
+}
+
+.info-contacto {
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .info-contacto {
+    margin-top: 0px;
+  }
+}
+
+.info-contacto p {
+  margin-bottom: 7px;
+}
+
+@media (min-width: 768px) {
+  .contacto {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacto {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor-boton .btn-azul {
+    width: 25% !important;
+  }
 }
 
 .btn-azul {
   background-color: rgb(4, 52, 116);
   color: white;
-  width: 150px;
+  width: 100%;
   height: 40px;
 }
 
@@ -378,37 +616,39 @@ h4 {
   padding-top: 30px;
 }
 
-/*Propiedades html*/
+/*=========================================
+             PROPIEDADES.HTML
+==========================================*/
 
 /*Informacion propiedades*/
-.contenedor-info{
+.contenedor-info {
   display: grid;
   grid-template-columns: 65% 35%;
   column-gap: 25px;
 }
 
-.informacion-propiedad{
+.informacion-propiedad {
   height: 800px;
 }
 
-.informacion-propiedad img{
+.informacion-propiedad img {
   width: 100%;
   border-radius: 5px;
-
 }
 
-
-/*form propiedad*/
-.form-propiedad{
+/*=========================================
+            FORM PROPIEDAD
+==========================================*/
+.form-propiedad {
   display: flex;
   justify-content: center;
-
 }
 
+/*========================================
+           CONTACTA UN AGENTE
+=========================================*/
 
-/*form agente*/
-
-.form-agente{
+.form-agente {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -416,11 +656,9 @@ h4 {
   padding: 2rem;
   background-color: rgb(226, 226, 226);
   border-radius: 10px;
-  
-
 }
 
-.form-agente h4{
+.form-agente h4 {
   color: rgb(4, 52, 116);
   font-weight: 500;
   padding-bottom: 10px;
@@ -428,7 +666,7 @@ h4 {
 }
 
 .form-agente input,
-.form-agente textarea{
+.form-agente textarea {
   margin-bottom: 15px;
   border: none;
   border-radius: 5px;
@@ -436,23 +674,47 @@ h4 {
   box-shadow: none;
   padding: 1rem;
   color: rgb(4, 52, 116);
-  
 }
 
-.form-agente input[type="submit"]{
-
+.form-agente input[type="submit"] {
   background-color: rgb(4, 52, 116);
   color: white;
   font-weight: 500;
 }
 
-.form-agente .form-network{
+.form-agente .form-network {
   display: flex;
   justify-content: space-evenly;
   font-size: 2rem;
   width: 90%;
   margin: 0 auto;
   color: rgb(4, 52, 116);
+}
+
+/*==========================================
+              RESUMEN INFO
+===========================================*/
+
+.resumen-info {
+  width: 100%;
+  height: 100px;
+  /*border: 1px solid rgb(4, 70, 156);*/
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.7rem !important;
+  color: white;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgb(0, 52, 121) 0%, rgb(9, 74, 158) 100%);
+  font-weight: 500;
+}
+
+.resumen-info .precio {
+  font-size: 1.7rem;
+  letter-spacing: 1px;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -485,7 +747,8 @@ h4 {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   color: #67b0d1;
 }
 
@@ -555,7 +818,6 @@ h4 {
   bottom: 0;
 }
 
-
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
@@ -572,7 +834,10 @@ h4 {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -580,7 +845,10 @@ h4 {
   border: 1px solid #67b0d1;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #67b0d1;
 }
 
@@ -621,9 +889,17 @@ h4 {
   padding: 0;
 }
 
+/*===========================================
+          INFO DETALLADA PROPIEDADES
+=============================================*/
 
+.info-detallada {
+  display: grid;
+  grid-template-columns: 2fr 50%;
+  column-gap: 20px;
+}
 
-
-
-
-
+.contenido-propiedad {
+  border: 1px solid rgb(9, 74, 158);
+  border-radius: 5px;
+}
