@@ -45,6 +45,10 @@ a:hover {
   margin: 15px 0 15px 0;
 }
 
+.color i{
+  color: rgb(4, 52, 116);
+}
+
 @media (min-width: 768px) {
   .titulos {
     margin: 25px 0 25px 0;

@@ -1,17 +1,20 @@
 const navbar = document.querySelector("#navbar");
 const active = document.querySelectorAll('.active');
+const social = document.querySelector('.net .social-networks');
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 145) {
     navbar.classList.add("bg-navar-oscuro");
     navbar.classList.remove('navbar-dark');
     navbar.classList.add('navbar-light')
+    social.classList.add('color')
     
   }
   if (window.scrollY < 145) {
     navbar.classList.remove("bg-navar-oscuro");
     navbar.classList.add('navbar-dark');
     navbar.classList.remove('navbar-light')
+    social.classList.remove('color');
   }
 });
 
