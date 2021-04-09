@@ -37,6 +37,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
       rel="stylesheet"
     />
+
+    
     <link rel="stylesheet" href="styles/styles.css" />
     <title>Document</title>
   </head>
@@ -96,8 +98,11 @@
       </nav>
     </header>
 
+
+    <div class="barra-inferior"><a href="#form-inferior"><i style="margin-right: 10px;" class="fas fa-phone-alt"></i> Contacta con un agente</a></div>
+
     <div class="container">
-      <h1 class="titulos text-center mt-3 mb-3">Hello World</h1>
+      <h1 class="titulos text-center mt-3 mb-3"></h1>
 
       <div class="contenedor-info">
         <div
@@ -111,6 +116,40 @@
             <p>Propiedad en Venta</p>
             <p class="precio">$ 4,000,000 MXN</p>
           </div>
+
+          <ul class="section-icon-features">
+            <li class="icon-feature"><img src="img/iconos/area.svg" alt="">
+              400 m² Superficie</li>
+
+            <li class="icon-feature">
+              <img src="img/iconos/banera.svg" alt="">
+
+              3 Baños
+            </li>
+
+            <li class="icon-feature">
+              <img src="img/iconos/coche.svg" alt="">
+
+              2 Estacionamientos
+            </li>
+
+            <li class="icon-feature">
+              <img src="img/iconos/dormitorio.svg" alt="">
+
+              3 Dormitorios 
+            </li>
+
+            <li class="icon-feature">
+              <img src="img/iconos/cocina.svg" alt="">
+
+              1 Cocina
+            </li>
+          </ul>
+
+          <div class="d-flex justify-content-between align-items-center">
+          <p class="ciudad">Ciudad Isla, Veracruz</p>
+          <p class="codigo">Codigo de propiedad: <span>CD15</span></p>
+        </div>
         </div>
 
         <div class="form-propiedad">
@@ -125,7 +164,6 @@
               name=""
               placeholder="Escribenos un mensaje!!!"
               id=""
-              cols="30"
               rows="5"
               style="resize: none"
             ></textarea>
@@ -148,7 +186,7 @@
     <section id="portfolio" class="portfolio mt-4">
       <div class="container">
         <div class="section-title" data-aos="fade-up" data-aos-delay="100">
-          <h1 class="titulos">Galería</h1>
+          <h1 class="titulos text-center">Galería</h1>
         </div>
 
         <div class="row" data-aos="fade-up">
@@ -275,19 +313,92 @@
     </section>
     <!-- End Portfolio Section -->
 
-    <section class="container">
-      <div class="info-contenido mb-4 mt-4">
-        <div class="clase">
-          <h2>Descripcion</h2>
-        </div>
 
-        <div class="info-detalles">
-          <h2>Detalles</h2>
-        </div>
-      </div>
+
+    <section class="container seccion-descripcion">
+      <h1 class="titulos text-center">Descripcion</h1>
+      <p>Casa de 2 niveles excelente ubicación a un par de cuadras del parque central y ayuntamiento, cuenta con 2 departamentos en el primer piso, amplio estacionamiento, salon de eventos, area de lavado, en el segundo piso cuenta con 4 recamaras, cocina, y corredor por cada reacamara con excelentes acabados, en el tercer nivel que es la terraza cuenta con una galera, la casa cuenta con 3 baños ademas se ecuentra totalmente bardeada.</p>
     </section>
 
-    <section class="container d-flex justify-content-center mt-4"></section>
+    <section class="container seccion-ubicacion">
+      <h1 class="titulos text-center">Ubicacion</h1>
+      <p class="titulos text-center">
+        Calle Francisco I. Madero #305 Colonia Mata Bejuco, Ciudad Isla, Ver.
+      </p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2377.8459485044923!2d-95.52839805702284!3d18.024487035273935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2smx!4v1617919452578!5m2!1sen!2smx"
+        width=""
+        height=""
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        class="map"
+      ></iframe>
+    </section>
+
+
+    <form class="form-agente display" id="form-inferior">
+      <h4 class="titulos mb-4 text-center">Contacta con un agente</h4>
+      <input type="text" placeholder="Email" name="" id="" />
+      <input type="text" placeholder="Nombre" />
+      <input type="text" name="" placeholder="Direccion" id="" />
+      <input type="text" placeholder="Telefono" />
+      <input type="text" placeholder="Correo" />
+      <textarea
+        name=""
+        placeholder="Escribenos un mensaje!!!"
+        id=""
+        rows="5"
+        style="resize: none"
+      ></textarea>
+      <input type="submit" value="Enviar Mensaje" />
+
+      <div class="form-network mt-3">
+        <i class="fas fa-phone-square-alt"></i>
+        <i class="fab fa-whatsapp-square"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fas fa-envelope-square"></i>
+        <i class="fas fa-share-alt-square"></i>
+        <i class="fas fa-download"></i>
+      </div>
+    </form>
+
+
+    <footer class="section-footer">
+
+      <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container-fluid container navegacion">
+          <a class="navbar-brand" href="#"><img class="logo" src="img/logo-blanco.png" alt=""></a>
+          <div class="collapse navbar-collapse navegacion" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#propiedades">Propiedades</a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>  
+              
+            </ul>
+          </div>
+    
+          <div class="social-networks">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+    
+          </div>
+        </div>
+      </nav>
+    
+      <h4>Coverza Inmobiliaria &copy</h4>
+      <p>Tu patrimonio es nuestra prioridad</p>
+    
+    </footer>
 
     <script src="/js/index.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
