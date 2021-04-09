@@ -1,6 +1,8 @@
 const navbar = document.querySelector("#navbar");
 const active = document.querySelectorAll('.active');
 const social = document.querySelector('.net .social-networks');
+const card = document.querySelectorAll('.card');
+console.log(card);
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 145) {
@@ -93,3 +95,10 @@ navbarlink.classList.remove('active');
   }
 
  
+  for(var i=0; i < card.length; i++){
+    card[i].addEventListener('click', function (e) {
+
+        const pagina = this.id;
+        window.location = `${pagina}.html`;
+    }, false);
+}

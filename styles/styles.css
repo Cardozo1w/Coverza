@@ -68,6 +68,16 @@ li {
   background-attachment: fixed !important;
 }
 
+
+.collapsing{height:0;
+  overflow:hidden;
+  -webkit-transition:height .1s ease;
+  transition:height .1s ease
+}
+@media(prefers-reduced-motion:reduce){
+  .collapsing{-webkit-transition:none;transition:none}
+}
+
 .bg-navbar {
   background-color: rgba(4, 52, 116, 0.418);
   transition: 0.4s all linear;
@@ -1151,3 +1161,13 @@ ul.section-icon-features {
   border-radius: 5px;
 
 }
+
+
+
+
+
+
+
+
+
+
