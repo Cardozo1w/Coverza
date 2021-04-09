@@ -662,8 +662,17 @@ li {
 .informacion-propiedad .codigo {
   color: black;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: .7rem;
   margin-bottom: 20px;
+}
+
+@media (min-width: 600px){
+  .informacion-propiedad .ciudad,
+.informacion-propiedad .codigo {
+
+  font-size: 1rem;
+}
+  
 }
 
 .informacion-propiedad .ciudad {
